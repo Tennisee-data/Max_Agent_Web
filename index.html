@@ -8,33 +8,33 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Ensures both html and body span the full height of the viewport */
-            background-color: #1e3143; /* background color */
+            height: 100%; /* Ensures both `html` and `body` stretch to the full height of the viewport */
+            background-color: #1e3143; /* Your desired background color */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
         }
         
         body {
-            display: flex;
-            flex-direction: column; /* Stacks header, section, and footer vertically */
+            flex-grow: 1; /* Ensures the body grows to fill the viewport height */
         }
         
-        header {
-            background-color: #333;
+        header, footer {
+            width: 100%; /* Ensure full-width coverage for header and footer */
+            background-color: #333; /* Header and footer background */
             color: white;
+            text-align: center;
             padding: 1rem 0;
         }
         
         section {
-            flex: 1; /* Allows the section to grow and fill available space */
+            flex: 1; /* Ensures this section fills all available space between header and footer */
+            display: flex;
+            justify-content: center; /* Centers the content horizontally */
+            align-items: center; /* Centers the content vertically */
             padding: 2rem;
+            text-align: center;
         }
-        
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem 0;
-            position: relative; /* Changed from fixed to relative */
-            width: 100%;
-        }
+
     </style>
 </head>
 <body>
